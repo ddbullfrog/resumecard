@@ -1,7 +1,14 @@
 language: ruby
-script: "./build.sh" # execute this script on each commit
+rvm:
+- 2.1
+
+install: gem install jekyll html-proofer jekyll-sitemap
+
+# branch whitelist
 branches:
   only:
-  - gh-pages # only take into account `jekyll' branch
-rvm:
-- 2.1.2 # version of `ruby'
+  - gh-pages     # test the gh-pages branch
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
