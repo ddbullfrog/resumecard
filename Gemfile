@@ -1,3 +1,5 @@
-source 'https://rubygems.org'
-gem 'github-pages'
-gem 'html-proofer'
+source "https://rubygems.org"
+
+gem "jekyll"
+gem "html-proofer"
+gem "jekyll-sitemap"
