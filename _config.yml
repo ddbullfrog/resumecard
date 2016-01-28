@@ -9,6 +9,8 @@ rss_url: /resumecard/pages/atom.xml
 # Build settings
 markdown: kramdown
 
+exclude: [vendor]
+
 # Author settings
 author:
   name: Dong Liang
