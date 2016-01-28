@@ -1,0 +1,7 @@
+language: ruby
+script: "./build.sh" # execute this script on each commit
+branches:
+  only:
+  - gh-pages # only take into account `jekyll' branch
+rvm:
+- 2.1.2 # version of `ruby'

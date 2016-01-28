@@ -1,0 +1,79 @@
+# Site settings
+title: Dong Liang's CV 
+description: ddbullfrog's CV
+favicon: /resumecard/assets/img/avatar.JPG
+baseurl: https://ddbullfrog.github.io/resumecard
+url: https://ddbullfrog.github.io/resumecard
+rss_url: /resumecard/pages/atom.xml
+
+# Build settings
+markdown: kramdown
+
+# Author settings
+author:
+  name: Dong Liang
+  title: Java Developer
+  address: Auckland, New Zealand
+  email: dongg.liang@gmail.com
+  link: http://ddbullfrog.com
+  weibo:
+  github: ddbullfrog
+  linkedin: ddbullfrog
+  twitter: ddbullfrog
+  gavatar: /resumecard/assets/img/avatar.JPG
+  workHistory:
+    - work1:
+      company: Finzsoft Solutions Ltd
+      location: Auckland, New Zealand
+      title: Java Developer
+      started: 2014
+      duration: (2014 - Present)
+      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+    - work2:
+      company: Agfa HealthCare
+      location: Shanghai, China
+      title: Java Developer
+      started: 2012
+      duration: (2012 - 2014)
+      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+    - work3:
+      company: Citigroup Services and Technology (China) Limited
+      location: Shanghai, China
+      title: Java Developer
+      started: 2009
+      duration: (2009 - 2012)
+      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+  educationHistory:
+    - education1:
+      organization: Northeastern University
+      degree: Bachelor
+      major: Software Engineering
+      started: 2005
+      duration: (2005 - 2009)
+      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+  languages:
+    - language1:
+      name: Chinese
+      proficiency: Native
+    - language2:
+      name: English
+      proficiency: Professional
+    - language3:
+      name: Japanese
+      proficiency: Limit
+  programmingSkills:
+    - skill1:
+      name: HTML
+      percentage: 100%
+    - skill2:
+      name: Bootstrap
+      percentage: 90%
+    - skill3:
+      name: JavaScript
+      percentage: 80%
+    - skill4:
+      name: AngularJS
+      percentage: 80%
+    - skill5:
+      name: Java/Java EE
+      percentage: 90%
