@@ -5,6 +5,7 @@ favicon: /resumecard/assets/img/avatar.JPG
 baseurl: https://ddbullfrog.github.io/resumecard
 url: https://ddbullfrog.github.io/resumecard
 rss_url: /resumecard/pages/atom.xml
+google_analytics: UA-63653234-1
 
 # Build settings
 markdown: kramdown
