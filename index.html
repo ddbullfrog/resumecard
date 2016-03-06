@@ -87,8 +87,124 @@ layout: default
             {% endif %}
         </div>
         <div class="col-md-4">
-            {% if site.author.programmingSkills %}
+            {% if site.author.programmingSkills or site.author.stackoverflow %}
                 <h3 class="title with-icon"><span class="fa fa-code cat-title"></span> Programming Skills</h3>
+                {% if site.author.stackoverflow %}
+                <div class="grid-block">
+                  <p><a href="http://stackoverflow.com/users/{{ site.author.stackoverflow }}"><img src="http://stackoverflow.com/users/flair/{{ site.author.stackoverflow }}.png"></a></p>
+                  <ul class="list-unstyled list-stackoverflow" id="stackoverflow_questions_and_answers"></ul>
+                  <script type="text/javascript">
+                  $(function () {
+                    var api_url_user = "//api.stackexchange.com/2.2/users/{{ site.author.stackoverflow }}/answers?pagesize=5&order=desc&sort=votes&site=stackoverflow";
+                    var api_url_format_questions = "//api.stackexchange.com/2.2/questions/%question_ids%?site=stackoverflow";
+
+                    $.get(api_url_user, function (data_user) {
+                      if (!data_user) {
+                        return;
+                      }
+                      if (!data_user.items) {
+                        return;
+                      }
+                      if (!data_user.items.length) {
+                        return;
+                      }
+
+                      var question_ids = [];
+                      var complex_questions = {};
+                      $.each(data_user.items, function (index, item) {
+                        if (!item) {
+                          return;
+                        }
+                        if (!item.question_id) {
+                          return;
+                        }
+                        if (!item.answer_id) {
+                          return;
+                        }
+                        if (!item.score) {
+                          return;
+                        }
+
+                        complex_questions[item.question_id] = {
+                          "question_id": item.question_id,
+                          "answer_id": item.answer_id,
+                          "score": humanize_score(item.score),
+                          "is_accepted": item.is_accepted
+                        };
+                        question_ids.push(item.question_id);
+                      });
+
+                      var api_url_questions = api_url_format_questions.replace('%question_ids%', question_ids.join(';'));
+
+                      $.get(api_url_questions, function (data_questions) {
+                        if (!data_questions) {
+                          return;
+                        }
+                        if (!data_questions.items) {
+                          return;
+                        }
+                        if (!data_questions.items.length) {
+                          return;
+                        }
+
+                        $.each(data_questions.items, function (index, item) {
+                          if (!item) {
+                            return;
+                          }
+                          if (!item.question_id) {
+                            return;
+                          }
+                          var complex_question = complex_questions[item.question_id];
+                          if (!complex_question) {
+                            return;
+                          }
+
+                          complex_question.title = item.title;
+                          complex_question.link = item.link;
+                        });
+
+                        render_complex_questions(complex_questions);
+                      });
+                    });
+                  });
+                  function humanize_score(score) {
+                    if (!score) {
+                      return;
+                    }
+
+                    if (score / 1000 > 1) {
+                      return (score / 1000) + "k";
+                    } else {
+                      return score;
+                    }
+                  }
+                  function render_complex_questions(complex_questions) {
+                    if (!complex_questions) {
+                      return;
+                    }
+
+                    $stackoverflow_questions_and_answers = $('#stackoverflow_questions_and_answers');
+
+                    $.each(complex_questions, function (index, complex_question) {
+                      var link = complex_question.link + '#answer-' + complex_question.answer_id;
+                      var $li = $('<li />');
+                      $('<span />')
+                        .addClass('badge')
+                        .addClass(complex_question.is_accepted ? 'progress-bar-success' : '')
+                        .text(complex_question.score)
+                        .appendTo($li);
+                      $('<a />')
+                        .attr('href', link)
+                        .attr('target', '_blank')
+                        .text(complex_question.title)
+                        .appendTo($li);
+                      $li.appendTo($stackoverflow_questions_and_answers);
+                    });
+                  }
+                  </script>
+                </div>
+                {% endif %}
+                {% if site.author.programmingSkills %}
                 <div class="grid-block">
                     <ul class="list-unstyled list-skills">
                         {% for programmingSkill in site.author.programmingSkills %}
@@ -107,6 +223,7 @@ layout: default
                         {% endfor %}
                     </ul>
                 </div>
+                {% endif %}
             {% endif %}
             {% if site.author.languages %}
                 <div class="deviter"></div>
