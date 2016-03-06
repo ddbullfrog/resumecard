@@ -183,6 +183,13 @@ layout: default
                       return;
                     }
 
+                    complex_questions = $.map(complex_questions, function (complex_question) {
+                      return [complex_question];
+                    });
+                    complex_questions.sort(function (a, b) {
+                      return b.score - a.score;
+                    });
+
                     $stackoverflow_questions_and_answers = $('#stackoverflow_questions_and_answers');
 
                     $.each(complex_questions, function (index, complex_question) {
