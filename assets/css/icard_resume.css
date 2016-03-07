@@ -291,6 +291,12 @@ hr {
     left: 7px;
 }
 
+/* stackoverflow css */
+.list-stackoverflow span {
+  margin-right: 5px;
+  width: 35px;
+}
+
 /* skills css */
 .list-skills li .progress {
     height: 10px;
