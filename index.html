@@ -87,7 +87,7 @@ layout: default
             {% endif %}
         </div>
         <div class="col-md-4">
-            {% if site.author.stackoverflow %}
+            {% if site.author.stackoverflow or site.author.programmingSkills %}
                 <h3 class="title with-icon"><span class="fa fa-code cat-title"></span> Programming Skills</h3>
                 {% if site.author.stackoverflow %}
                 <div class="grid-block">
