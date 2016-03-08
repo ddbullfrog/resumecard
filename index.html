@@ -68,12 +68,16 @@ layout: default
                                             {% endif %}
                                         </small>
                                     </p>
-                                    {% if education.duration %}
-                                        <p>
-                                            <small class="text-muted"><i class="fa fa-calendar"></i> {{ education.duration }}
-                                            </small>
-                                        </p>
-                                    {% endif %}
+                                    <p>
+                                        <small class="text-muted">
+                                            {% if education.duration %}
+                                                <i class="fa fa-calendar"></i> {{ education.duration }} |
+                                            {% endif %}
+                                            {% if education.location %}
+                                                <i class="fa fa-map-marker"></i>  {{ work.location }}
+                                            {% endif %}
+                                        </small>
+                                    </p>
                                 </div>
                                 <div class="timeline-body">
                                     {% if education.description %}
