@@ -1,10 +1,10 @@
 # Site settings
 title: Dong Liang's CV 
 description: ddbullfrog's CV
-favicon: /resumecard/assets/img/avatar.JPG
+favicon: /assets/img/avatar.JPG
 baseurl: https://ddbullfrog.github.io/resumecard
 url: https://ddbullfrog.github.io/resumecard
-rss_url: /resumecard/pages/atom.xml
+rss_url: /pages/atom.xml
 google_analytics: UA-63653234-1
 
 # Build settings
@@ -76,10 +76,10 @@ author:
       percentage: 90%
     - skill3:
       name: JavaScript
-      percentage: 80%
+      percentage: 70%
     - skill4:
       name: AngularJS
-      percentage: 80%
+      percentage: 70%
     - skill5:
       name: Java/Java EE
       percentage: 90%

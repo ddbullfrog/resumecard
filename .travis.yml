@@ -1,14 +1,4 @@
-language: node_js
-node_js:
-  - 0.10
+#!/usr/bin/env bash
+set -e # halt script on error
 
-env:
-  matrix:
-    - ruby=1.9.3
-    - ruby=2.0.0-p353
-
-before_script:
-  - rvm install ruby $ruby
-  - rvm use $ruby
-  - ruby -v
-  - gem install jekyll
+bundle exec jekyll build
