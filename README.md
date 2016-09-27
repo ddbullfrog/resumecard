@@ -2,7 +2,7 @@
 -------
 resumecard is a theme built on top of bootstrap and other freely available libraries. Its aimed to provide a fully furnished Jekyll theme for personal resume.  
 
-[![Build Status](https://travis-ci.org/ddbullfrog/resumecard.svg?branch=master)](https://travis-ci.org/ddbullfrog/resumecard)
+[![Build Status](https://travis-ci.org/ddbullfrog/resumecard.svg?branch=gh-pages)](https://travis-ci.org/ddbullfrog/resumecard)
 
 ## Demo
 -------
