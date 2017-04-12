@@ -35,14 +35,14 @@ author:
       duration: (2014 - Present)
       description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
     - work2:
-      company: Agfa HealthCare
+      company: XXX Ltd
       location: Shanghai, China
       title: Java Developer
       started: 2012
       duration: (2012 - 2014)
       description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
     - work3:
-      company: Citigroup Services and Technology (China) Limited
+      company: XXX Ltd
       location: Shanghai, China
       title: Java Developer
       started: 2009
@@ -50,7 +50,7 @@ author:
       description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
   educationHistory:
     - education1:
-      organization: Northeastern University
+      organization: XXXXXX University
       location: Shenyang, China
       degree: Bachelor
       major: Software Engineering
